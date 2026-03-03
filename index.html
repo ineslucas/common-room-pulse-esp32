@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Room Magnetic Pulse</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Room Magnetic Pulse</h1>
+
+  <div class="dashboard">
+    <!-- Live Reading Panel -->
+    <div class="panel">
+      <h2>Live Reading</h2>
+      <div class="axes-grid">
+        <div class="axis-card">
+          <div class="axis-label">X</div>
+          <div class="axis-number" id="val-x">—</div>
+          <div class="axis-unit">µT</div>
+          <div class="bar-track">
+            <div class="bar-center"></div>
+            <div class="bar-fill" id="bar-x"></div>
+          </div>
+        </div>
+        <div class="axis-card">
+          <div class="axis-label">Y</div>
+          <div class="axis-number" id="val-y">—</div>
+          <div class="axis-unit">µT</div>
+          <div class="bar-track">
+            <div class="bar-center"></div>
+            <div class="bar-fill" id="bar-y"></div>
+          </div>
+        </div>
+        <div class="axis-card">
+          <div class="axis-label">Z</div>
+          <div class="axis-number" id="val-z">—</div>
+          <div class="axis-unit">µT</div>
+          <div class="bar-track">
+            <div class="bar-center"></div>
+            <div class="bar-fill" id="bar-z"></div>
+          </div>
+        </div>
+      </div>
+      <div class="magnitude" id="magnitude">|B| = —</div>
+    </div>
+
+    <!-- PIR Panel -->
+    <div class="panel">
+      <h2>Presence (PIR)</h2>
+      <div class="pir-grid">
+        <div class="pir-card">
+          <div class="axis-label">Status</div>
+          <div class="pir-status motion-no" id="pir-motion">—</div>
+        </div>
+        <div class="pir-card">
+          <div class="axis-label">Analog Raw</div>
+          <div class="axis-number" id="pir-raw">—</div>
+          <div class="axis-unit">0–4095</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- History Panel -->
+    <div class="panel">
+      <h2>History</h2>
+      <div id="raw-data">
+        Waiting for data...
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
